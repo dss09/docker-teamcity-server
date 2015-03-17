@@ -2,7 +2,7 @@ FROM smalllark/java
 MAINTAINER Dmitri Sh <smalllark@gmail.com>
 
 # Install Youtrack.
-ENV TEAMCITY_VERSION 9.0.2
+ENV TEAMCITY_VERSION 9.0.3
 RUN mkdir -p /usr/local/teamcity
 RUN mkdir -p /var/lib/teamcity
 RUN wget -nv http://download.jetbrains.com/teamcity/TeamCity-$TEAMCITY_VERSION.tar.gz -O /tmp/teamcity-$TEAMCITY_VERSION.tar.gz
