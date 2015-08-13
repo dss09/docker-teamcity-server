@@ -1,7 +1,8 @@
 FROM smalllark/java
 MAINTAINER Dmitri Sh <smalllark@gmail.com>
 
-RUN apt-get install -y dnsutils telnet
+RUN apt-get -qq update && apt-get upgrade -y && \
+    apt-get install -y dnsutils telnet
 
 # Install TeamCity Server.
 ENV TEAMCITY_VERSION 9.1.1
