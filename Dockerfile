@@ -5,7 +5,7 @@ RUN apt-get -qq update && apt-get upgrade -y && \
     apt-get install -y dnsutils telnet
 
 # Install TeamCity Server.
-ENV TEAMCITY_VERSION 9.1.3
+ENV TEAMCITY_VERSION 9.1.4
 RUN mkdir -p /usr/local/teamcity && \
     mkdir -p /var/lib/teamcity && \
     wget -nv http://download.jetbrains.com/teamcity/TeamCity-$TEAMCITY_VERSION.tar.gz -O /tmp/teamcity-$TEAMCITY_VERSION.tar.gz && \
