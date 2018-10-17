@@ -2,7 +2,7 @@
 
 # Redirect stderr so everything ends up in the log file
 exec 2>&1
-export TEAMCITY_SERVER_MEM_OPTS="-Xms750m -Xmx750m -XX:MaxPermSize=270m"
+export TEAMCITY_SERVER_MEM_OPTS="-Xms750m -Xmx4g -XX:ReservedCodeCacheSize=350m"
 export TEAMCITY_SERVER_OPTS=""
 export TEAMCITY_DATA_PATH="/var/lib/teamcity"
 exec /usr/local/teamcity/TeamCity/bin/teamcity-server.sh run 2>&1

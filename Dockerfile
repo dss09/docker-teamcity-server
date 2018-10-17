@@ -10,7 +10,7 @@ ENV TEAMCITY_VERSION 2018.1.3
 RUN mkdir -p /usr/local/teamcity && \
     mkdir -p /var/lib/teamcity && \
     wget -nv https://download.jetbrains.com/teamcity/TeamCity-$TEAMCITY_VERSION.tar.gz -O /tmp/teamcity-$TEAMCITY_VERSION.tar.gz && \
-    cd /usr/local/teamcity && tar xvf /tmp/teamcity-$TEAMCITY_VERSION.tar.gz && \
+    cd /usr/local/teamcity && tar xf /tmp/teamcity-$TEAMCITY_VERSION.tar.gz && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD ./etc /etc
 EXPOSE 8111
