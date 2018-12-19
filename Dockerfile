@@ -5,8 +5,8 @@ RUN apt-get -qq update && apt-get upgrade -y && \
     apt-get install -y dnsutils telnet
 
 # Install TeamCity Server.
-ENV TEAMCITY_BUILD 58658
-ENV TEAMCITY_VERSION 2018.1.3
+ENV TEAMCITY_BUILD 60925
+ENV TEAMCITY_VERSION 2018.2
 RUN mkdir -p /usr/local/teamcity && \
     mkdir -p /var/lib/teamcity && \
     wget -nv https://download.jetbrains.com/teamcity/TeamCity-$TEAMCITY_VERSION.tar.gz -O /tmp/teamcity-$TEAMCITY_VERSION.tar.gz && \
