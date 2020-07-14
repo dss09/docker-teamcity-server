@@ -5,8 +5,8 @@ RUN apt-get -qq update && apt-get upgrade -y && \
     apt-get install -y dnsutils telnet git
 
 # Install TeamCity Server.
-ENV TEAMCITY_BUILD 72059
-ENV TEAMCITY_VERSION 2019.2.4
+ENV TEAMCITY_BUILD 78726
+ENV TEAMCITY_VERSION 2020.1.2
 RUN mkdir -p /usr/local/teamcity && \
     mkdir -p /var/lib/teamcity && \
     wget -nv https://download.jetbrains.com/teamcity/TeamCity-$TEAMCITY_VERSION.tar.gz -O /tmp/teamcity-$TEAMCITY_VERSION.tar.gz && \
